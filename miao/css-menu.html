@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>menu</title>
+      <style>
+          body {
+              margin: 0;
+              zoom: 2;
+          }
+          ul {
+              margin: 0;
+              padding: 0;
+              list-style: none;
+          }
+          ul.menu > li {
+              display: inline-block;
+          }
+          li {
+              white-space: nowrap;
+              position: relative;
+              background-color: lightseagreen;
+          }
+          li:hover {
+              background-color: greenyellow;
+          }
+          ul.menu ul {
+              display: none;
+              position: absolute;
+              left: 0;
+              top: 100%;
+          } 
+          ul.menu ul ul {
+              left: 100%;
+              top: 0;
+          }
+          li:hover > ul {
+              display: block;
+          }
+      </style>
+    </head>
+    <body>
+        <ul class="menu">
+            <li>文件(F)
+                <ul>
+                    <li>保存</li>
+                    <li>打开</li>
+                    <li>另存为...
+                      <ul>
+                          <li>c盘</li>
+                          <li>d盘</li>
+                          <li>e盘</li>
+                      </ul>
+                    </li>  
+                </ul>
+            </li>
+            <li>编辑（E）
+              <ul>
+                  <li>保存</li>
+                  <li>打开</li>
+                  <li>另存为...
+                    <ul>
+                        <li>c盘</li>
+                        <li>d盘</li>
+                        <li>e盘</li>
+                    </ul>
+                  </li> 
+              </ul>
+            </li>
+            <li>视图
+                <ul>
+                  <li>保存</li>
+                  <li>打开</li>
+                  <li>另存为...
+                      <ul>
+                          <li>c盘</li>
+                          <li>d盘</li>
+                          <li>e盘</li>
+                      </ul>
+                  </li>
+                </ul>
+            </li>
+        </ul>
+    </body>
+</html>

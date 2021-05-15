@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>block-basic</title>
+      <style>
+          div {
+              margin: 20px;
+              margin-left: 10px;
+              margin-right: 10px;
+              background-color: red;
+              color: black;
+              padding: 0 calc((100% - 640px)/2);
+          }
+          section {
+              box-sizing: border-box;
+              border: 2px solid black;
+              margin: auto;
+              width: 600px;
+              padding: 10px;
+          }
+          section p {
+              height: 4em;
+              overflow: auto;
+          }
+          section main {
+              height: 3em;
+              background-color: lightseagreen;
+          }
+          section main:hover {
+              width: 596px;
+              margin-left: -10px;
+              margin-right: -10px;
+          }
+          span {
+            margin: 650px;
+            border: 50px solid violet;
+            border-color: transparent transparent lightsalmon transparent;
+            width: 0;
+          }
+      </style>
+    </head>
+    <body>
+        <div>aaa</div>
+        <section>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae sapiente voluptas officiis, praesentium, nemo iure cumque nihil, facere hic asperiores dicta commodi magni, voluptates eaque esse atque nesciunt! Cupiditate, modi.</p>
+            <main></main>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos modi accusantium deleniti consequuntur, enim nulla voluptatum qui ducimus esse rem eius eligendi consequatur sint. Sunt ut, est iusto neque numquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam animi perspiciatis eos, molestias provident, quae ullam! Obcaecati suscipit optio labore iusto veniam facere, amet officiis, eveniet voluptatibus molestiae, dignissimos dolor!</p>
+        </section>
+        <span></span>
+    </body>
+</html>
