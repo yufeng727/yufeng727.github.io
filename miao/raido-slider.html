@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>radio-slider</title>
+    <style>
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 100%;
+            transition: left 0.8s;
+        }
+        input:nth-child(1):checked ~ div img:nth-child(1),
+        input:nth-child(2):checked ~ div img:nth-child(2),
+        input:nth-child(3):checked ~ div img:nth-child(3){
+            left: 0;
+            z-index: 8;
+        }
+        div {
+            height: 500px;
+            width: 400px;
+            position: relative;
+            border: 4px solid lightseagreen;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+   <section>
+       <input type="radio" name="a" checked>
+       <input type="radio" name="a">
+       <input type="radio" name="a">
+
+       <div>
+           <img id="a1" src="https://cdn.colorhub.me/AdvE_6z2or7PF4uHPnMlycqmpDRPVbet9Gi-8jd5L3g/auto/0/500/ce/0/bG9jYWw6Ly8vZDkv/NTUvNzBiZTgxOTE5/Y2QzNDdjNzkyODk1/ZWYwMzczZDNhMjAx/OGI3ZDk1NS5qcGc.jpg" alt="123">
+           <img id="a2" src="https://cdn.colorhub.me/Y3BmaO6mIAHwosHr0iR3pHXBeQBlPeHJY97Z_MVEgzw/auto/0/500/ce/0/bG9jYWw6Ly8vOGQv/YmMvODlkMDMwMWNl/N2I3MWY0MTBjMGMx/NDFlNmM1NjhhNDg4/ZTMwOGRiYy5qcGc.jpg" alt="456">
+           <img id="a3" src="https://cdn.colorhub.me/mQyPFkPVvBqtZkR5ocFPDagWLk-6eC1TmtqgBUT7ZkM/auto/0/500/ce/0/bG9jYWw6Ly8vYjUv/NmUvNTE5ZDU2Zjg2/MjExMjYwMmRhZDc0/NjQ1YzE1NDIyZTMy/MjZiYjU2ZS5qcGc.jpg" alt="789">
+       </div>
+   </section>
+   <section>
+       <input type="radio" name="c" checked>
+       <input type="radio" name="c">
+       <input type="radio" name="c">
+
+       <div>
+           <img id="c1" src="https://tenfei01.cfp.cn/creative/vcg/800/new/VCG21gic20049351.jpg" alt="abc">
+           <img id="c2" src="https://alifei04.cfp.cn/creative/vcg/800/new/VCG21gic20049347.jpg" alt="def">
+           <img id="c3" src="https://tenfei01.cfp.cn/creative/vcg/800/new/VCG21gic20049348.jpg" alt="ghi">
+       </div>
+   </section>
+</body>
+</html>
