@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>footer-at-bottom</title>
+    <style>
+        html {
+            height: 100%;
+        }
+
+        ul {
+           color: rgba(119,119,119);
+           background-color: rgba(248,248,248);
+           list-style-type: none;
+           width: 100%;
+           height: 50px;
+           margin: 0;
+           padding: 0;
+        }
+        li {
+           display: inline-block;
+           position: relative;
+           padding: 20px;
+           line-height: 10px;
+           xcolor: rgba(51,51,51);
+        }  
+    
+        header {
+            font-size: 40px;
+            margin-left: 150px;
+            margin-right: 100px;
+        }
+        body {
+            margin: 0;
+            display: flex;
+            flex-flow: column;
+            min-height: 100%;
+        }
+        main {
+            margin-left: 150px;
+            margin-right: 100px;
+            flex-grow: 1;
+        }
+        main p code {
+            background-color: rgba(249,242,244);
+            color: rgba(199,37,83);
+            padding: 2px;
+            font-size: 17px;
+            font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+        }
+        main p p {
+            text-decoration: none;
+        }
+        footer {
+            background-color: rgba(245,245,245);
+            height: 50px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding-left: 150px;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li>Project name</li>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Dropdown</li>
+    </ul>
+    <hr>
+    <header>Sticky footer with fixed navbar</header>
+    <hr>
+    <main>
+    <p>"Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS.A fixed navbar has been added with " <code>padding-top: 60px;</code>" on the "<code> body > .container.</code></p>
+    <p>Back to <a target=_blank href="https://getbootstrap.com/docs/3.4/examples/sticky-footer/">the default sticky footer</a>minus the navbar</p>
+    </main>
+    <footer>
+        place sticky footer content here.
+    </footer>
+</body>
+</html>
