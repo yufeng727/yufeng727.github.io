@@ -1,18 +1,18 @@
 var yufeng727 = function () {
   function chunk(array, size) {
     var result = []
-    var arr = []
     var count = 0
-    for (var i = 0; i < arr.length; i++) {
+    var arr = []
+    for (var i = 0; i < array.length; i++) {
       arr.push(array[i])
       count++
-      if (count == size) {
+      if (count === size) {
         result.push(arr)
         arr = []
         count = 0
       }
     }
-    if (arr.length > 0) {
+    if (count != 0) {
       result.push(arr)
     }
     return result
@@ -30,13 +30,16 @@ var yufeng727 = function () {
   }
 
   function reverse(array) {
-    var temp = []
-    for (var i = array.length - 1; i >= 0; i--) {
-      temp[temp.length] = array[i]
+    var i = array.length - 1
+    var j = 0
+    while (j < i) {
+      var temp = array[i]
+      array[i] = array[j]
+      array[j] = temp
+      j++
+      i--
     }
-    for (var j = 0; j < temp.length; j++) {
-      array[j] = temp[j]
-    }
+    return array
   }
 
   function uniq(array) {
@@ -51,10 +54,61 @@ var yufeng727 = function () {
     return array
   }
 
+  function sum(array) {
+    var sum = 0
+    for (var i = 0; i < array.length; i++) {
+      sum += array[i]
+    }
+  }
+
+  function map(array, square) {
+    var 
+  }
+
+  function fill(array, val, start, end) {
+    var result = []
+    for (var i = 0; i < array.length; i++) {
+      result.push(array.fill[i], val)
+    }
+    return result
+  }
+
+  function zip([arrays]) {
+      var result = []
+      var arr = []
+    for (var i = 0; i < array.length; i++) {
+      arr.push(arrays.zip[i])
+    }
+  }
+
+  function every(arrays, Boolean) {
+    
+  }
+
+  function join(array, [separator=',']) {
+    var 
+  }
+
+  function compact(array) {
+    var final = []
+    for (num in array) {
+      if (array[num])
+          final.push(array[num])
+    }
+    return final
+  }
+
   return {
     chunk: chunk,
     concat: concat,
     reverse: reverse,
     uniq: uniq,
+    sum: sum,
+    map: map,
+    fill: fill,
+    zip: zip,
+    every: every,
+    join: join,
+    compact: compact,
   }
 }()
