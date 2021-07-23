@@ -61,10 +61,6 @@ var yufeng727 = function () {
     }
   }
 
-  function map(array, square) {
-    var 
-  }
-
   function fill(array, val, start, end) {
     var result = []
     for (var i = 0; i < array.length; i++) {
@@ -79,14 +75,6 @@ var yufeng727 = function () {
     for (var i = 0; i < array.length; i++) {
       arr.push(arrays.zip[i])
     }
-  }
-
-  function every(arrays, Boolean) {
-    
-  }
-
-  function join(array, [separator=',']) {
-    var 
   }
 
   function compact(array) {
@@ -104,11 +92,8 @@ var yufeng727 = function () {
     reverse: reverse,
     uniq: uniq,
     sum: sum,
-    map: map,
     fill: fill,
     zip: zip,
-    every: every,
-    join: join,
     compact: compact,
   }
 }()
