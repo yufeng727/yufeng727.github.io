@@ -59,6 +59,7 @@ var yufeng727 = function () {
     for (var i = 0; i < array.length; i++) {
       sum += array[i]
     }
+    return sum
   }
 
   function fill(array, val, start, end) {
@@ -85,6 +86,69 @@ var yufeng727 = function () {
     }
     return final
   }
+  
+  function sumBy(ary, predicate) {
+    predicate = iteratee(predicate)
+
+    var sum = 0   //最后的结果。
+    for (var i = 0; i < ary.length; i++) {
+      sum += predicate(ary[i])
+    }
+    return sum
+  }
+
+  function flatten(array) {
+    return[].concat(...array)
+  }
+
+  function flattenDeep(array) {
+    var res = []
+    for (var i = 0; i < array.length; i++) {
+      if (Array.isArray(array[i])) {
+        res.push(...flattenDeep(array[i]))
+      } else {
+        res.push(array[i])
+      }
+    }
+    return res
+  }
+
+  function flattenDepth(ary, depth = 1) {
+    if (Depth == 0) {
+      return ary;
+    }
+    var result = []
+    for (var i = 0; i < depth; i++) {
+      var item = ary[i]
+      if (Array.isArray(item)) {
+        item = flattenDepth(item, Depth - 1)
+        for (j = 0; j < item.length; j++) {
+          result.push(item[j])
+        }
+      } else {
+        result.push(item)
+      }
+    }
+    return result
+  }
+
+  function difference(array,...value) {
+    var result = []
+    var val = []
+    for (var i = 0; i < value.length; i++) {
+      val = val.concat(value[i])
+    }
+    for (var i = 0; i < array.length; i++) {
+      if (val.indexOf(array[i]) < 0) {
+        result.push(array[i])
+      }
+    }
+    return result
+  }
+
+  function head(array) {
+    return array[0]
+  }
 
   return {
     chunk: chunk,
@@ -95,5 +159,11 @@ var yufeng727 = function () {
     fill: fill,
     zip: zip,
     compact: compact,
+    sumBy: sumBy,
+    flatten: flatten,
+    flattenDeep: flattenDeep,
+    flattenDepth: flattenDepth,
+    difference: difference,
+    head: head,
   }
 }()
