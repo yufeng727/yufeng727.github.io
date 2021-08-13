@@ -219,7 +219,7 @@ var yufeng727 = function () {
     }
     let result = []
     for (var i = n; i < array.length; i++) {
-      return push(array[i])
+      result.push(array[i])
     }
     return result
   }
