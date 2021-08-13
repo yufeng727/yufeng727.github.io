@@ -54,14 +54,6 @@ var yufeng727 = function () {
     return array
   }
 
-  function sum(array) {
-    var sum = 0
-    for (var i = 0; i < array.length; i++) {
-      sum += array[i]
-    }
-    return sum
-  }
-
   function fill(array, val, start, end) {
     var result = []
     for (var i = 0; i < array.length; i++) {
@@ -85,16 +77,6 @@ var yufeng727 = function () {
           final.push(array[num])
     }
     return final
-  }
-  
-  function sumBy(ary, predicate) {
-    predicate = iteratee(predicate)
-
-    var sum = 0   //最后的结果。
-    for (var i = 0; i < ary.length; i++) {
-      sum += predicate(ary[i])
-    }
-    return sum
   }
 
   function flatten(array) {
@@ -210,16 +192,46 @@ var yufeng727 = function () {
     return a - b
   }
 
+  function sum(array) {
+    var sum = 0
+    for (var i = 0; i < array.length; i++) {
+      sum += array[i]
+    }
+    return sum
+  }
+  
+  function sumBy(ary, predicate) {
+    predicate = iteratee(predicate)
+
+    var sum = 0   //最后的结果。
+    for (var i = 0; i < ary.length; i++) {
+      sum += predicate(ary[i])
+    }
+    return sum
+  }
+
+  function drop(array, n = 1) {
+    if (n == 0) {
+      return array
+    }
+    if (n > array.length) {
+      return []
+    }
+    let result = []
+    for (var i = n; i < array.length; i++) {
+      return push(array[i])
+    }
+    return result
+  }
+
   return {
     chunk: chunk,
     concat: concat,
     reverse: reverse,
     uniq: uniq,
-    sum: sum,
     fill: fill,
     zip: zip,
     compact: compact,
-    sumBy: sumBy,
     flatten: flatten,
     flattenDeep: flattenDeep,
     flattenDepth: flattenDepth,
@@ -233,5 +245,8 @@ var yufeng727 = function () {
     divide: divide,
     multiply: multiply,
     subtract: subtract,
+    sum: sum,
+    sumBy: sumBy,
+    drop: drop,
   }
 }()
