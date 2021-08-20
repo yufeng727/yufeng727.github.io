@@ -224,6 +224,18 @@ var yufeng727 = function () {
     return result
   }
 
+  function dropRight(ary, n) {
+    if (n == 0) {
+      return ary
+    };
+    if (n >= ary.length) {
+      return []
+    };
+    if (i < ary.length - n) {
+      return ary[i]
+    };
+  };  
+    
   return {
     chunk: chunk,
     concat: concat,
@@ -248,5 +260,6 @@ var yufeng727 = function () {
     sum: sum,
     sumBy: sumBy,
     drop: drop,
+    dropRight: dropRight,
   }
 }()
