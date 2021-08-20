@@ -231,9 +231,11 @@ var yufeng727 = function () {
     if (n >= ary.length) {
       return []
     };
-    if (i < ary.length - n) {
-      return ary[i]
+    let result = []
+    for (let i = 0; i < ary.length - n; i++) {
+      result.push(ary[i])
     };
+    return result
   };  
     
   return {
